@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="./index.js" defer></script>
 </head>
 <body>
   <main>
@@ -25,7 +27,7 @@
           <a href="#first-section" class="header__link">Quiero comenzar mi transformación</a>
         </div>
 
-        <div class="header__imageContainer">
+        <div class="header__right">
           <img class="header__image" src="./assets/images/header-img.png" alt="Alt de la imagen del header">
         </div>
       </div>
@@ -33,9 +35,9 @@
     </header>
 
     <!--  FIRST SECTION  -->
-    <section class="app_firstSection" id="first-section">
+    <section class="app__section app__section--firstSection" id="first-section">
 
-      <h2 class="firstSection__title">¿Te sientes identificado con esto?</h2>
+      <h2 class="app__sectionTitle">¿Te sientes identificado con esto?</h2>
 
       <div class="firstSection__cards">
 
@@ -68,6 +70,22 @@
         </div>
       </div>
     </section>
+
+    <!--  SECOND SECTION  -->
+    <section class="app__section app__section--secondSection">
+      <h2 class="app__sectionTitle">¿Qué vas a lograr con esta herramienta?</h2>
+      <p class="secondSection__claim">En una semana podras liberarte y enfocarte nuevamente</p>
+      <p class="secondSection__listTitle">Un método práctico, simple y probado que te enseña a:</p>
+      <ul class="secondSection__benefits">
+        <li class="secondSection__benefit">🎯 Desactivar el piloto automático</li>
+        <li class="secondSection__benefit">📵 Romper la adicción al scroll</li>
+        <li class="secondSection__benefit">⏰ Recuperar horas perdidas</li>
+        <li class="secondSection__benefit">🧠 Reprogramar tu enfoque</li>
+        <li class="secondSection__benefit">👁️ Volver a ser dueño de tu atención</li>
+      </ul>
+    </section>
+
+
   </main>
 </body>
 </html>

@@ -11,6 +11,11 @@
   /* border: 1px solid red; */
 }
 
+ul, li{
+  list-style: none;
+  padding: 0;
+}
+
 html{
   padding: var(--res-padding);
   background-color: black;
@@ -23,6 +28,26 @@ html{
 
 body{
   margin: 0;
+}
+
+/* ----- SHARED STYLES ----- */
+
+.app__section{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.app__sectionTitle{
+  font-size: 3rem;
+  text-align: center;
+  text-wrap: balance;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.visible{
+  background-color: aqua;
 }
 
 /* ----- HEADER STYLES ----- */
@@ -39,6 +64,7 @@ body{
 
 .header__left{
   flex-basis: 50%;
+  animation: fade-from-left 1s ease-in-out both;
 }
 
 .header__title{
@@ -83,10 +109,11 @@ body{
   box-shadow: 0 0 20px white;
 }
 
-.header__imageContainer{
+.header__right{
   flex-basis: 50%;
   display: flex;
   justify-content: end;
+  animation: fade-from-right 1s ease-in-out both;
 }
 
 .header__image{
@@ -97,19 +124,6 @@ body{
 
 /* ----- FIRST SECTION STYLES ----- */
 
-.app_firstSection{
-  min-height: 300px;
-  padding: 4rem 0;
-}
-
-.firstSection__title{
-  font-size: 3rem;
-  text-align: center;
-  text-wrap: balance;
-  margin: 0;
-  margin-bottom: 3rem;
-}
-
 .firstSection__cards{
   margin: 0 2rem;
   display: flex;
@@ -117,11 +131,20 @@ body{
   justify-content: center;
 }
 
+
+.firstSection__card.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .firstSection__card{
+  opacity: 0;
   border: 1px solid rgba(255, 255, 255, 0.13);
   background-color: #0C0C0D;
   border-radius: 1rem;
   padding: 2rem;
+  transform: translateY(10px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .firstSection__card h3{
@@ -130,6 +153,32 @@ body{
 
 .card__iconContainer{
   font-size: 2rem;
+}
+
+/* ----- SECOND SECTION STYLES ----- */
+
+.secondSection__claim,
+.secondSection__listTitle{
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.secondSection__listTitle{
+  color: var(--color-primary);
+  margin-bottom: 2.5;
+}
+
+.secondSection__benefits{
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.secondSection__benefit{
+  margin-bottom: 1rem;
 }
 
 /* ----- MEDIA QUERIES ----- */
@@ -148,7 +197,7 @@ body{
     margin-top: 3rem;
   }
 
-  .header__imageContainer{
+  .header__right{
     justify-content: center;
   }
 
@@ -161,8 +210,7 @@ body{
     flex-basis: calc(50% - 2rem);
   }
 
-
-  .firstSection__title{
+  .app__sectionTitle{
     font-size: 2rem;
   }
 }
@@ -174,11 +222,15 @@ body{
     line-height: 2.3rem;
   }
 
-  .app_firstSection{
+  .header__left{
+    margin-top: 1.2rem;
+  }
+
+  .app__section{
     padding: 2rem 0;
   }
 
-  .firstSection__title{
+  .app_sectionTitle{
     font-size: 1.8rem;
   }
 
@@ -206,5 +258,25 @@ body{
   }
   100% {
     transform: translateY(7px);
+  }
+}
+
+@keyframes fade-from-left {
+  from{
+    opacity: 0;
+    transform: translateX(-15px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-from-right {
+  from{
+    opacity: 0;
+    transform: translateX(25px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
   }
 }
