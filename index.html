@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <script src="./index.js" defer></script>
+  <script src="./index.js" type="module" defer></script>
 </head>
 <body>
   <main>
@@ -85,7 +85,37 @@
       </ul>
     </section>
 
-
+    <!--  COUNTDOWN SECTION  -->
+    <section class="app__section app__section--countdownSection">
+      <div class="countdownSection__clock">
+        <svg viewBox="0 0 24 24" width="40px" fill="transparent" xmlns="http://www.w3.org/2000/svg" stroke="white">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g id="style=linear">
+              <g id="clock-stand">
+                <path id="line" d="M18 20.5L19.5 22" stroke="white" stroke-width="2.184" stroke-linecap="round"></path>
+                <path id="line_2" d="M6 20.5L4.5 22" stroke="white" stroke-width="2.184" stroke-linecap="round"></path>
+                <path id="vector" d="M21 13C21 17.968 16.968 22 12 22C7.032 22 3 17.968 3 13C3 8.032 7.032 4 12 4C16.968 4 21 8.032 21 13Z" stroke="white" stroke-width="2.184" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="vector_2" d="M15.339 15.862L12.549 14.197C12.063 13.909 11.667 13.216 11.667 12.649V8.95898" stroke="white" stroke-width="2.184" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="line_3" d="M18 2L21.747 5.31064" stroke="white" stroke-width="2.184" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="line_4" d="M6 2L2.25304 5.31064" stroke="white" stroke-width="2.184" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <h3 class="countdownSection__claim">OFERTA POR TIEMPO LIMITADO PARA USUARIOS NUEVOS</h3>
+      <div class="countdownSection__counter" id="countdown-container">
+        <span class="counter__minutes" id="minutes">
+          00
+        </span>
+        <span class="counter__separator">:</span>
+        <span class="counter__seconds" id="seconds">
+          30
+        </span>
+      </div>
+    </section>
   </main>
 </body>
 </html>

@@ -181,6 +181,71 @@ body{
   margin-bottom: 1rem;
 }
 
+/* ----- COUNTDOWN SECTION STYLES ----- */
+
+.app__section--countdownSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.countdownSection__clock{
+  background-color: red;
+  padding: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ring 1s ease-in-out both infinite;
+}
+
+.countdownSection__clock svg{
+  width: 34px;
+}
+
+.countdownSection__claim{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@keyframes ring {
+  0%{
+    transform: rotate(0deg);
+  }20%{
+    transform: rotate(10deg);
+  }40%{
+    transform: rotate(-10deg);
+  }60%{
+    transform: rotate(10deg);
+  }80%{
+    transform: rotate(-10deg);
+  }100%{
+    transform: rotate(0deg);
+  }
+}
+
+.countdownSection__counter{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 7rem;
+}
+
+.countdownSection__counter.stopped{
+  color: red;
+  animation: breathe 1s ease-in-out both infinite;
+}
+
+@keyframes breathe {
+  0%{
+    transform: scale(1);
+  }50%{
+    transform: scale(1.05);
+  }100%{
+    transform: scale(1);
+  }
+}
 /* ----- MEDIA QUERIES ----- */
 
 @media screen and (max-width: 1024px) {
@@ -247,6 +312,10 @@ body{
 @media screen and (max-width: 500px) {
   :root{
     --res-padding: 1rem;
+  }
+
+  .countdownSection__counter{
+    font-size: 5rem;
   }
 }
 
