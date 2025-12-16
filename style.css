@@ -21,7 +21,6 @@ html{
   background-color: black;
   color: white;
   font-family: 'Poppins';
-  /* height: 100%; */
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -30,7 +29,7 @@ body{
   margin: 0;
 }
 
-/* ----- SHARED STYLES ----- */
+/* ----- SHARED CLASSES ----- */
 
 .app__section{
   max-width: 1500px;
@@ -155,6 +154,19 @@ body{
   font-size: 2rem;
 }
 
+.firstSection__footer{
+  text-align: center;
+  margin-top: 3em;
+}
+
+.firstSection__footer h4{
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: .5rem;
+  text-wrap: balance;
+}
+
 /* ----- SECOND SECTION STYLES ----- */
 
 .secondSection__claim,
@@ -180,6 +192,19 @@ body{
 .secondSection__benefit{
   margin-bottom: 1rem;
 }
+
+.secondSection__footer{
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* ----- OTHER SECTION STYLES ----- */
+
+/* .productCard__img{
+  width: 500px;
+} */
 
 /* ----- COUNTDOWN SECTION STYLES ----- */
 
@@ -258,6 +283,10 @@ body{
     line-height: 3.5rem;
   }
 
+  .header__title span{
+    text-wrap: balance;
+  }
+
   .header__left{
     margin-top: 3rem;
   }
@@ -305,6 +334,10 @@ body{
 
   .firstSection__card{
     flex-basis: 100%;
+  }
+
+  .secondSection__footer{
+    font-size: 1.7rem;
   }
 
 }
