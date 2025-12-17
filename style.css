@@ -16,6 +16,10 @@ ul, li{
   padding: 0;
 }
 
+button{
+  font-family: 'Poppins';
+}
+
 html{
   padding: var(--res-padding);
   background-color: black;

@@ -1,6 +1,6 @@
 const cards = Array.from(document.getElementsByClassName('firstSection__card'));
 
-console.log(cards);
+// console.log(cards);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

@@ -1,5 +1,6 @@
 import './javascript/cards-observer.js';
 import './javascript/countdown.js';
+import './javascript/accordion.js';
 
 // const cards = Array.from(document.getElementsByClassName('firstSection__card'));
 

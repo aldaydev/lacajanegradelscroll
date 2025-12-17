@@ -4,12 +4,12 @@ const countdownContainerEl = document.getElementById('countdown-container');
 let minutesValue = parseInt(minutesEl.innerText);
 let secondsValue = parseInt(secondsEl.innerText);
 
-console.log(minutesEl, secondsEl);
+// console.log(minutesEl, secondsEl);
 
 let interval = null;
 
 function startCountdown() {
-  console.log(minutesValue, secondsValue);
+  // console.log(minutesValue, secondsValue);
   interval = setInterval(() => {
     if(secondsValue === 0) {
       if(minutesValue !== 0) secondsValue = 60;
@@ -26,7 +26,7 @@ function startCountdown() {
 startCountdown();
 
 function stopCountdown() {
-  console.log(countdownContainerEl);
+  // console.log(countdownContainerEl);
   clearInterval(interval);
   interval = null;
   secondsValue = formated(0);
@@ -34,8 +34,6 @@ function stopCountdown() {
   minutesValue = formated(0);
   countdownContainerEl.classList.add('stopped');
 };
-
-
 
 function formated(number) {
   let format2 = new Intl.NumberFormat('en-US', {
