@@ -7,7 +7,6 @@
 .accordion__item{
   width: 100%;
   max-width: 1024px;
-  /* overflow: hidden; */
   margin: 0 auto;
   border-radius: 1rem;
   box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.356);
