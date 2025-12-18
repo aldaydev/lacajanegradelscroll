@@ -1,0 +1,131 @@
+.timeline__steps{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.timeline__step{
+  display: grid;
+  /* grid-template-columns: 1fr 32px 1fr; */
+  grid-template-columns: 32px 1fr;
+  grid-template-areas:
+  "line chapter"
+  "line descr";
+  column-gap: 1rem;
+}
+
+.timeline__step p{
+  grid-area: "descr";
+  margin: 0;
+}
+
+.timeline__step .step__title{
+  grid-area: "title";
+  flex-basis: 40%;
+}
+
+.step__chapter{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.step__chapter2{
+  font-size: 1.2rem;
+}
+
+.timeline__line{
+  grid-area: line;
+  width: 2rem;
+  height: 7rem;
+  position: relative;
+}
+
+/* --------------  */
+/* .timeline__line{
+  display: none;
+} */
+
+/* --------------  */
+
+.timeline__line::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 12px;
+  left: calc(50% - 5px);
+}
+
+.timeline__line::after{
+  content: "";
+  width: 1px;
+  height: 130%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 12px;
+  left: calc(50%);
+}
+
+
+.timeline__step .step__title {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+}
+
+/* .timeline__steps{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline__step{
+  position: relative;
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+
+.timeline__step h4, p{
+  margin: 0;
+}
+
+.timeline__step h4{
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.timeline__step::before{
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5px;
+  width: .7rem;
+  height: .7rem;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.timeline__step::after{
+  content: ">";
+  position: absolute;
+  top: 100%;
+  left: -.2rem;
+  width: fit-content;
+  font-size: 1.5rem;
+  transform: rotate(90deg);
+  z-index: 10;
+}
+
+.line{
+  background-color: white;
+  width: 1px;
+  height: 93%;
+  position: absolute;
+  top: 2rem;
+  left: .4rem;
+} */

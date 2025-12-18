@@ -206,9 +206,10 @@ body{
 
 /* ----- OTHER SECTION STYLES ----- */
 
-/* .productCard__img{
-  width: 500px;
-} */
+.productCard__img{
+  width: 100%;
+  max-width: 300px;
+}
 
 /* ----- COUNTDOWN SECTION STYLES ----- */
 
