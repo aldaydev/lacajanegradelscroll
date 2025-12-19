@@ -50,6 +50,54 @@ body{
   margin-bottom: 3rem;
 }
 
+.app__subtitle{
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.app__button{
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  font-size: 1.1rem;
+  padding: .7rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.app__button--cto{
+  font-size: 1.3rem;
+}
+
+.app__button span{
+  margin-left: .5rem;
+  transition: transform .3s ease-in-out;
+  display: inline-block;
+}
+
+.app__button:hover{
+  box-shadow: 0 0 20px white;
+}
+
+.app__button:hover span{
+  transform: translateX(5px);
+}
+
+.app__list{
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.app__listItem{
+  margin-bottom: 1rem;
+}
+
 /* ----- HEADER STYLES ----- */
 
 .header__innnerContainer{
@@ -68,7 +116,7 @@ body{
 }
 
 .header__title{
-  font-size: 4.5rem;
+  font-size: 4.3rem;
   line-height: 4.5rem;
   display: flex;
   gap: .5rem;
@@ -91,18 +139,8 @@ body{
   color: white;
 }
 
-.header__link{
-  display: inline-block;
-  text-decoration: none;
-  background-color: white;
-  color: black;
-  font-size: 1.1rem;
-  padding: .7rem 2rem;
-  border-radius: 2rem;
+.app__button--animated{
   animation: float 2s ease-in-out alternate infinite;
-  cursor: pointer;
-  border: none;
-  text-align: center;
 }
 
 .header__link:hover{
@@ -185,28 +223,79 @@ body{
   margin-bottom: 2.5;
 }
 
-.secondSection__benefits{
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 1.5rem;
-}
-
-.secondSection__benefit{
-  margin-bottom: 1rem;
-}
-
-.secondSection__footer{
-  margin-top: 4rem;
-  font-size: 2rem;
-  text-align: center;
-  text-wrap: balance;
-}
-
 /* ----- OTHER SECTION STYLES ----- */
+
+.app__subtitle--third{
+  margin-top: 1rem;
+}
+
+.fourthSection__productCard{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: fit-content;
+  border: 1px solid white;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 3rem 5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.63);
+}
 
 .productCard__img{
   width: 100%;
   max-width: 300px;
+}
+
+.productCard__content{
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard__oldValue{
+  width: fit-content;
+  color: red;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.productCard__oldValue::after{
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  opacity: .8;
+}
+
+.productCard__newValue{
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.seventhSection__claim{
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.seventhSection__cto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app__sectionTitle--seventh{
+  margin-bottom: 0;
+}
+
+.app__subtitle--seventh{
+  margin-top: 0;
+  margin-bottom: 4rem;
 }
 
 /* ----- COUNTDOWN SECTION STYLES ----- */
@@ -341,7 +430,7 @@ body{
     flex-basis: 100%;
   }
 
-  .secondSection__footer{
+  .app__subtitle{
     font-size: 1.7rem;
   }
 
@@ -355,6 +444,10 @@ body{
 
   .countdownSection__counter{
     font-size: 5rem;
+  }
+
+  .app__button--cto{
+    font-size: 1.3rem;
   }
 }
 
@@ -435,4 +528,14 @@ body{
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.social__icon:hover svg{
+  transform: scale(1.1);
+}
+
+.social__icon svg{
+  transition: transform .2s ease-in-out;
+  fill: white;
+  width: 30px;
 }

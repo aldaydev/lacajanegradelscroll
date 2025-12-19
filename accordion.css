@@ -35,11 +35,11 @@
 
 .accordionItem__buttonIcon{
   transition: transform .3s ease-in-out;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .accordionItem__buttonIcon.closed{
-  transform: rotate(135deg);
+  transform: rotate(180deg);
 }
 
 .accordionItem__content{

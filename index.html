@@ -28,7 +28,7 @@
             <span>y deja de regalar tu vida al scroll</span>
           </h1>
           <p class="header__description">Un <span>método claro y práctico</span> para personas que pasan demasiado tiempo mirando el celular… y lo saben.</p>
-          <a href="#first-section" class="header__link">Quiero recuperar el control</a>
+          <a href="#first-section" class="app__button app__button--animated">Quiero recuperar el control</a>
         </div>
 
         <div class="header__right">
@@ -103,25 +103,25 @@
       <h2 class="app__sectionTitle">¿Qué vas a lograr con esta herramienta?</h2>
 
       <p class="secondSection__listTitle">Un método práctico y probado que te enseña a:</p>
-      <ul class="secondSection__benefits">
-        <li class="secondSection__benefit">
+      <ul class="app__list">
+        <li class="app__listItem">
           ✅ Dejar de mirar el celular cada pocos minutos sin darte cuenta.
         </li>
-        <li class="secondSection__benefit">
+        <li class="app__listItem">
           ✅ Recuperar tiempo que hoy se te va sin saber muy bien en qué.
         </li>
-        <li class="secondSection__benefit">
+        <li class="app__listItem">
           ✅ Concentrarte mejor en lo realmente importante.
         </li>
-        <li class="secondSection__benefit">
+        <li class="app__listItem">
           ✅ Empezar y terminar el día con mayor claridad mental.
         </li>
-        <li class="secondSection__benefit">
+        <li class="app__listItem">
           ✅ Volver a decidir cuándo usar el celular y cuándo no.
         </li>
       </ul>
 
-      <h3 class="secondSection__footer">Cuando entiendes lo que pasa en tu cerebro, todo empieza a ordenarse.</h3>
+      <h3 class="app__subtitle">Cuando entiendes lo que pasa en tu cerebro, todo empieza a ordenarse.</h3>
     </section>
 
     <!--  THIRD SECTION  -->
@@ -208,8 +208,10 @@
 
         </div>
 
-        <h3 class="thirdSection__footer">No va de cambiar tu vida.</h3>
-        <h3 class="thirdSection__footer">Va de dejar de perderla en el celular</h3>
+        <p class="app__subtitle app__subtitle--third">
+          <span>No va de cambiar tu vida.</span>
+          <span>Va de dejar de perderla en el celular</span>
+        </p>
 
       </div>
 
@@ -221,36 +223,42 @@
       <h2 class="app__sectionTitle">¿Qué obtienes al acceder al Protocolo Anti-Scroll 7D?</h2>
 
       <div class="fourthSection__whatsIncluded">
-        <p>Acceso inmediato a un sistema guiado, organizado paso a paso dentro de la plataforma.</p>
+        <p class="app__subtitle">Acceso inmediato a un sistema guiado, organizado paso a paso dentro de la plataforma.</p>
       </div>
 
       <div class="fourthSection__whatsInside">
-        <p class="fourthSection__listTitle">Dentro encontrarás:</p>
-          <ul class="fourthSection__benefits">
-            <li class="fourthSection__benefit">
+        <h3 class="app__subtitle">Dentro encontrarás:</h3>
+          <ul class="app__list">
+            <li class="app__listItem">
               🧠 Claridad sobre qué te está pasando con el celular y por qué su uso se ha vuelto automático
             </li>
-            <li class="fourthSection__benefit">
+            <li class="app__listItem">
               ⚙️ Fase de preparación inicial para empezar con buen pie y no sabotearte desde el principio.
             </li>
-            <li class="fourthSection__benefit">
+            <li class="app__listItem">
               📆 Siete días de acciones concretas, pensadas para aplicarse sin complicaciones.
             </li>
-            <li class="fourthSection__benefit">
+            <li class="app__listItem">
               🧭 Decisiones prácticas para dejar de usar el celular por inercia y empezar a elegir mejor.
             </li>
-            <li class="fourthSection__benefit">
+            <li class="app__listItem">
               🧭 Parte final para consolidar lo que has conseguido durante la semana.
             </li>
           </ul>
       </div>
 
       <div class="fourthSection__productCard">
-        <img class="productCard__img" loading="lazy" src="/assets/images/book-img-500px.png" alt="Book image alt">
-        <div>
-          <span>¿Precio anterior?</span>
-          <span>19,99$</span>
-          <p>Accede Ahora</p>
+
+        <div class="productCard__imgContainer">
+          <img class="productCard__img" loading="lazy" src="/assets/images/book-img-500px.png" alt="Book image alt">
+        </div>
+
+        <div class="productCard__content">
+          <span class="productCard__oldValue">25,99$</span>
+          <span class="productCard__newValue">19,99$</span>
+          <a href="#" class="app__button app__button--cto">
+            Accede Ahora <span>➜</span>
+          </a>
         </div>
       </div>
 
@@ -326,11 +334,16 @@
 
     <!--  SEVENTH SECTION  -->
     <section class="app__section app__section--seventhSection">
-      <h2 class="app__sectionTitle">El celular no va a desaparecer.</h2>
-      <h3>La pregunta es si vas a seguir dejándole decidir por ti.</h3>
+      <h2 class="app__sectionTitle app__sectionTitle--seventh">El celular no va a desaparecer.</h2>
+      <h3 class="app__subtitle app__subtitle--seventh">La pregunta es si vas a seguir dejándole decidir por ti.</h3>
 
-      <a href="#">Recuperar el control ahora</a>
-      <span>Acceso inmediato</span>
+      <div class="seventhSection__cto">
+        <a href="#" class="app__button app__button--cto">
+          Recuperar el control ahora <span>➜</span>
+        </a>
+        <span class="seventhSection__claim">Acceso inmediato</span>
+      </div>
+
     </section>
 
     <!--  FOOTER SECTION -->
@@ -338,7 +351,7 @@
     <footer class="app__footer">
       <section class="footer__top">
         <div class="footer__author">
-          <img src="/assets/images/truman-b-img-150px.webp" alt="Truman B" class="author__img">
+          <img src="/assets/images/truman-b-img-150px.webp" loading="lazy" alt="Truman B" class="author__img">
           <p class="author__description">
             <b>Sobre el Autor</b> En un mundo saturado de información, <b>Trumann B.</b> se especializa en la claridad. Autor y consultor enfocado en sistemas de autonomía personal, su trabajo explora la intersección entre la mente humana y el entorno moderno.
           </p>
@@ -347,7 +360,11 @@
         <div class="footer__social">
           <p>Únete a la mejor comunidad de motivación</p>
           <div class="social__icons">
-
+            <a href="#" class="social__icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
