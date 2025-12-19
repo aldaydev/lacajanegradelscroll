@@ -7,14 +7,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accordion.css">
-  <link rel="stylesheet" href="timeline.css">
-  <link rel="stylesheet" href="footer.css">
 
-  <script src="./index.js" type="module" defer></script>
+  <script src="./index.js" type="module"></script>
 </head>
 <body>
   <main>
@@ -143,7 +141,7 @@
       </div>
 
       <div class="thirdSection__timeline">
-        <h3>El protocolo se organiza en un recorrido simple y progresivo:</h3>
+        <p class="app__subtitle"> El protocolo se organiza en un recorrido simple y progresivo:</p>
         <div class="timeline__steps">
 
           <div class="timeline__step timeline__step--0">
@@ -250,16 +248,21 @@
       <div class="fourthSection__productCard">
 
         <div class="productCard__imgContainer">
-          <img class="productCard__img" loading="lazy" src="/assets/images/book-img-500px.png" alt="Book image alt">
+          <img class="productCard__img" loading="lazy" src="./assets/images/book-img-500px.png" alt="Book image alt">
         </div>
 
-        <div class="productCard__content">
-          <span class="productCard__oldValue">25,99$</span>
-          <span class="productCard__newValue">19,99$</span>
+        <div class="productCard__price">
+          <span class="productCard__oldPrice">25,99$</span>
+          <span class="productCard__newPrice">19,99$</span>
+        </div>
+
+        <div class="productCard__cto">
           <a href="#" class="app__button app__button--cto">
             Accede Ahora <span>➜</span>
           </a>
         </div>
+
+
       </div>
 
     </section>
@@ -351,7 +354,7 @@
     <footer class="app__footer">
       <section class="footer__top">
         <div class="footer__author">
-          <img src="/assets/images/truman-b-img-150px.webp" loading="lazy" alt="Truman B" class="author__img">
+          <img src="./assets/images/truman-b-img-150px.webp" loading="lazy" alt="Truman B" class="author__img">
           <p class="author__description">
             <b>Sobre el Autor</b> En un mundo saturado de información, <b>Trumann B.</b> se especializa en la claridad. Autor y consultor enfocado en sistemas de autonomía personal, su trabajo explora la intersección entre la mente humana y el entorno moderno.
           </p>

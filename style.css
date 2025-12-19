@@ -1,8 +1,10 @@
-/* ----- GLOBAL STYLES ----- */
+/* #region GLOBAL STYLES */
 
 :root{
   --color-primary: #ffbf00;
   --color-secondary: #90a1b9;
+  --color-lines: #ffffff41;
+  --color-card-bg: #0C0C0D;
   --res-padding: 0 2rem;
   --res-x-padding: 2rem;
 }
@@ -28,13 +30,16 @@ html{
   font-family: 'Poppins';
   margin: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
   margin: 0;
 }
 
-/* ----- SHARED CLASSES ----- */
+/* #endregion */
+
+/* #region SHARED CLASSES*/
 
 .app__section{
   max-width: 1500px;
@@ -98,14 +103,15 @@ body{
   margin-bottom: 1rem;
 }
 
-/* ----- HEADER STYLES ----- */
+/* #endregion */
+
+/* #region HEADER STYLES */
 
 .header__innnerContainer{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100dvh;
-  display: flex;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -156,11 +162,13 @@ body{
 
 .header__image{
   max-width: 512px;
-  min-width: 300px;
+  min-width: 200px;
   width: 100%;
 }
 
-/* ----- FIRST SECTION STYLES ----- */
+/* #endregion */
+
+/* #region FIRST SECTION STYLES */
 
 .firstSection__cards{
   margin: 0 2rem;
@@ -177,8 +185,8 @@ body{
 
 .firstSection__card{
   opacity: 0;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  background-color: #0C0C0D;
+  border: 1px solid var(--color-lines);
+  background-color: var(--color-card-bg);
   border-radius: 1rem;
   padding: 2rem;
   transform: translateY(10px);
@@ -207,7 +215,9 @@ body{
   text-wrap: balance;
 }
 
-/* ----- SECOND SECTION STYLES ----- */
+/* #endregion */
+
+/* #region SECOND SECTION STYLES */
 
 .secondSection__claim,
 .secondSection__listTitle{
@@ -223,23 +233,135 @@ body{
   margin-bottom: 2.5;
 }
 
-/* ----- OTHER SECTION STYLES ----- */
+/* #endregion */
+
+/* #region THIRD SECTION STYLES */
 
 .app__subtitle--third{
   margin-top: 1rem;
 }
 
-.fourthSection__productCard{
+.timeline__steps{
   display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.timeline__step{
+  display: grid;
+  grid-template-columns: 1fr 32px 2fr;
+  grid-template-areas: "chapter line descr";
+  column-gap: 1rem;
+  min-height: 100px;
+}
+
+.step__title {
+  grid-area: chapter;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+}
+
+.step__chapter{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.step__chapter2{
+  font-size: 1.4rem;
+}
+
+.step__description{
+  grid-area: descr;
+  margin: 0;
+  margin-top: .3rem;
+  font-size: 1.2rem;
+}
+
+.step__line{
+  grid-area: line;
+  width: 2rem;
+  height: 110%;
+  position: relative;
+}
+
+.step__line::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 14px;
+  left: calc(50% - 5px);
+  outline: 2px solid white;
+  outline-offset: 2px;
+  transform: scale(0);
+}
+
+.step__line.visible::before{
+  animation: show-dot 1s ease-in-out both;
+}
+
+@keyframes show-dot {
+  from{
+    transform: scale(0);
+  }to{
+    transform: scale(1);
+  }
+}
+
+.step__line:not(.step__line--last)::after{
+  content: "";
+  width: 1px;
+  height: 0%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 14px;
+  left: calc(50%);
+}
+
+.step__line.visible:not(.step__line--last)::after{
+  animation: show-line 1s 1s ease-in-out both;
+}
+
+@keyframes show-line {
+  from{
+    height: 0%;
+  }to{
+    height: 130%;
+  }
+}
+
+/* #endregion */
+
+/* #region FOURTH SECTION STYLES */
+
+.fourthSection__productCard{
+  display: grid;
+  grid-template-areas:
+    "img price"
+    "img cto"
+  ;
+  grid-template-rows: auto 1fr;
   justify-content: center;
   gap: 2rem;
   width: fit-content;
-  border: 1px solid white;
+  border: 1px solid var(--color-lines);
   margin: 0 auto;
   margin-top: 4rem;
   padding: 3rem 5rem;
   border-radius: 1rem;
-  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.63);
+  box-shadow: 2px 2px 15px var(--color-lines);
+}
+
+.productCard__imgContainer{
+  grid-area: img;
 }
 
 .productCard__img{
@@ -247,19 +369,20 @@ body{
   max-width: 300px;
 }
 
-.productCard__content{
+.productCard__price{
+  grid-area: price;
   display: flex;
   flex-direction: column;
 }
 
-.productCard__oldValue{
+.productCard__oldPrice{
   width: fit-content;
   color: red;
   font-size: 1.3rem;
   position: relative;
 }
 
-.productCard__oldValue::after{
+.productCard__oldPrice::after{
   content: "";
   position: absolute;
   bottom: 50%;
@@ -270,11 +393,86 @@ body{
   opacity: .8;
 }
 
-.productCard__newValue{
+.productCard__newPrice{
   color: white;
   font-size: 3rem;
-  margin-bottom: 2rem;
 }
+
+.productCard__cto{
+  grid-area: cto;
+}
+
+/* #endregion */
+
+/* #region FIFTH SECTION STYLES */
+
+
+
+/* #endregion */
+
+/* #region SIXTH SECTION STYLES */
+
+.sixthSection__accordion{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.accordion__item{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.356);
+}
+
+.accordionItem__button{
+  color: white;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  text-wrap: balance;
+  border-radius: 1rem;
+}
+
+.accordion__item:has(.accordionItem__button:hover){
+  box-shadow: 3px 3px 25px rgba(255, 255, 255, 0.356);
+}
+
+.accordionItem__buttonIcon{
+  transition: transform .3s ease-in-out;
+  font-size: 1.6rem;
+}
+
+.accordionItem__buttonIcon.closed{
+  transform: rotate(180deg);
+}
+
+.accordionItem__content{
+  overflow: hidden;
+  transition: height .3s ease-in-out;
+  font-size: 1.3rem;
+}
+
+.accordionItem__innerContainer{
+  padding: 0 1.5rem 2.5rem 1.5rem;
+}
+
+.accordionItem__innerContainer p{
+  margin: 0;
+}
+
+/* #endregion */
+
+/* #region SEVENTH SECTION STYLES */
 
 .seventhSection__claim{
   color: var(--color-primary);
@@ -298,7 +496,72 @@ body{
   margin-bottom: 4rem;
 }
 
-/* ----- COUNTDOWN SECTION STYLES ----- */
+/* #endregion */
+
+/* #region FOOTER STYLES */
+
+.app__footer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app__footer::before{
+  content: "";
+  position: absolute;
+  width: calc(100% + var(--res-x-padding) * 2);
+  left: calc(0% - var(--res-x-padding));
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.footer__top{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__author{
+  flex-basis: 50%;
+}
+
+.footer__social{
+  flex-basis: 50%;
+  text-align: right;
+}
+
+.author__description{
+  margin: 0;
+}
+
+.author__img{
+  width: 80px;
+  margin: 0;
+}
+
+.footer__bottom{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social__icon:hover svg{
+  transform: scale(1.1);
+}
+
+.social__icon svg{
+  transition: transform .2s ease-in-out;
+  fill: white;
+  width: 30px;
+}
+
+/* #endregion */
+
+/* #region COUNTDOWN STYLES */
 
 .app__section--countdownSection{
   display: flex;
@@ -363,7 +626,10 @@ body{
     transform: scale(1);
   }
 }
-/* ----- MEDIA QUERIES ----- */
+
+/* #endregion */
+
+/* #region MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
   .firstSection__cards{
@@ -405,14 +671,26 @@ body{
 
 @media screen and (max-width: 770px) {
 
+  /* HEADER SECTION */
+
   .header__title{
     font-size: 2.3rem;
     line-height: 2.3rem;
+    text-align: center;
+    line-height: 2.5rem;
   }
 
   .header__left{
     margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .header__description{
+    text-align: center;
+  }
+
 
   .app__section{
     padding: 1.5rem 0;
@@ -434,9 +712,56 @@ body{
     font-size: 1.7rem;
   }
 
+  .app__listItem{
+    font-size: 1.2rem;
+  }
+
+  .fourthSection__productCard {
+    padding: 2rem 2rem;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .timeline__step{
+    grid-template-columns: 32px 1fr;
+    grid-template-areas:
+    "line chapter"
+    "line descr";
+  }
+
+  .step__title {
+    align-items: start;
+    text-align: left;
+  }
+
+  @keyframes show-line {
+    from{
+      height: 0%;
+    }to{
+      height: 110%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .fourthSection__productCard {
+    grid-template-areas:
+    "img price"
+    "cto cto"
+  ;
+  }
+
+  .productCard__cto{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
+
   :root{
     --res-padding: 1.2rem;
     --res-x-padding: 1.2rem;
@@ -449,16 +774,34 @@ body{
   .app__button--cto{
     font-size: 1.3rem;
   }
+
+  .fourthSection__productCard {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    grid-template-areas:
+      "img"
+      "price"
+      "cto"
+    ;
+  }
+
+  .productCard__img{
+    width: 100%;
+    max-width: none;
+  }
 }
 
-/* ----- ANIMATIONS ----- */
+/* #endregion */
+
+/* #region ANIMATIONS */
 
 @keyframes float {
   0% {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
   }
   100% {
-    transform: translateY(7px);
+    transform: translateY(5px);
   }
 }
 
@@ -482,60 +825,5 @@ body{
   }
 }
 
-.app__footer{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+/* #endregion */
 
-.app__footer::before{
-  content: "";
-  position: absolute;
-  width: calc(100% + var(--res-x-padding) * 2);
-  left: calc(0% - var(--res-x-padding));
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.205);
-}
-
-.footer__top{
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 3rem;
-  display: flex;
-  gap: 2rem;
-}
-
-.footer__author{
-  flex-basis: 50%;
-}
-
-.footer__social{
-  flex-basis: 50%;
-  text-align: right;
-}
-
-.author__description{
-  margin: 0;
-}
-
-.author__img{
-  width: 80px;
-  margin: 0;
-}
-
-.footer__bottom{
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.social__icon:hover svg{
-  transform: scale(1.1);
-}
-
-.social__icon svg{
-  transition: transform .2s ease-in-out;
-  fill: white;
-  width: 30px;
-}
