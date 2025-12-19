@@ -21,7 +21,7 @@
   align-items: center;
   gap: 1rem;
   font-size: 1.3rem;
-  padding: 1.8rem 1.5rem;
+  padding: 1.5rem;
   border: none;
   cursor: pointer;
   text-align: left;
@@ -35,10 +35,11 @@
 
 .accordionItem__buttonIcon{
   transition: transform .3s ease-in-out;
+  font-size: 1.8rem;
 }
 
 .accordionItem__buttonIcon.closed{
-  transform: rotate(180deg);
+  transform: rotate(135deg);
 }
 
 .accordionItem__content{
@@ -48,7 +49,7 @@
 }
 
 .accordionItem__innerContainer{
-  padding: 1rem;
+  padding: 0 1.5rem 2.5rem 1.5rem;
 }
 
 .accordionItem__innerContainer p{

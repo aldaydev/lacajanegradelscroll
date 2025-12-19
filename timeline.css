@@ -56,12 +56,25 @@
   left: calc(50% - 5px);
   outline: 2px solid white;
   outline-offset: 2px;
+  transform: scale(0);
+}
+
+.step__line.visible::before{
+  animation: show-dot 1s ease-in-out both;
+}
+
+@keyframes show-dot {
+  from{
+    transform: scale(0);
+  }to{
+    transform: scale(1);
+  }
 }
 
 .step__line:not(.step__line--last)::after{
   content: "";
   width: 1px;
-  height: 130%;
+  height: 0%;
   border-radius: 50%;
   position: absolute;
   background-color: white;
@@ -69,7 +82,17 @@
   left: calc(50%);
 }
 
+.step__line.visible:not(.step__line--last)::after{
+  animation: show-line 1s 1s ease-in-out both;
+}
 
+@keyframes show-line {
+  from{
+    height: 0%;
+  }to{
+    height: 130%;
+  }
+}
 
 
 @media screen and (max-width: 700px) {
@@ -83,6 +106,14 @@
   .step__title {
     align-items: start;
     text-align: left;
+  }
+
+  @keyframes show-line {
+    from{
+      height: 0%;
+    }to{
+      height: 110%;
+    }
   }
 
 }
