@@ -701,7 +701,7 @@ body{
   }
 }
 
-@keyframes fade-from-left {
+/* @keyframes fade-from-left {
   from{
     opacity: 0;
     transform: translateX(-15px);
@@ -719,7 +719,7 @@ body{
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
 /* #endregion */
 

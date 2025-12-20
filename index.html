@@ -4,15 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La caja negra del scroll</title>
-  <link rel="icon" href="./favico.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <!-- Meta tags-->
+  <meta name="description" content="Protocolo Anti-Scroll 7D">
+  <meta name="author" content="Truman B">
+  <meta property="og:title" content="La caja negra del scroll">
+  <meta property="og:description" content="Protocolo Anti-Scroll 7D">
+  <meta property="og:image" content="https://lacajanegradelscroll.com/assets/images/thumbnail.webp">
+  <meta property="og:url" content="https://lacajanegradelscroll.com">
+  <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <script src="./index.js" type="module"></script>
+  <script src="./index.js" type="module" defer></script>
 </head>
 <body>
   <main>
@@ -32,10 +40,17 @@
 
         <div class="header__right">
           <img
-            src="./assets/images/header-img_500px.webp"
+            src="./assets/images/header-img_300px.webp"
+            srcset="
+              ./assets/images/header-img_300px.webp 300w,
+              ./assets/images/header-img_500px.webp 500w
+            "
+            sizes="(max-width: 600px) 300px, 500px"
             alt="Protocolo Anti-Scroll 7D portada"
             class="header__image"
-          >
+            fetchpriority="high"
+            loading="eager"
+          />
         </div>
       </div>
 
@@ -258,7 +273,7 @@
           <img src="./assets/images/truman-b-img-150px.webp" loading="lazy" alt="Truman B" class="author__img">
           <p class="author__description">
             <b>Sobre el Autor:</b><br>
-            <b>Trumann B</b> es un investigador independiente y experimentador de alto rendimiento. Su trabajo consiste en cuestionar las normas establecidas y probar en su propia piel métodos alternativos para optimizar la vida humana.
+            <b>Truman B</b> es un investigador independiente y experimentador de alto rendimiento. Su trabajo consiste en cuestionar las normas establecidas y probar en su propia piel métodos alternativos para optimizar la vida humana.
           </p>
         </div>
 
