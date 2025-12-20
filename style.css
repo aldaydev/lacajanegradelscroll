@@ -108,6 +108,10 @@ body{
 
 /* #region HEADER STYLES */
 
+.app__header{
+  padding-bottom: 2rem;
+}
+
 .header__innnerContainer{
   display: flex;
   justify-content: center;
@@ -162,29 +166,28 @@ body{
 }
 
 .header__image{
-  max-width: 512px;
+  max-width: 480px;
   min-width: 200px;
   width: 100%;
 }
 
 /* #endregion */
 
-/* #region FIRST SECTION STYLES */
+/* #region PAINS SECTION STYLES */
 
-.firstSection__cards{
+.pains__cards{
   margin: 0 2rem;
   display: flex;
   column-gap: 1.5rem;
   justify-content: center;
 }
 
-
-.firstSection__card.visible{
+.pains__card.visible{
   opacity: 1;
   transform: translateY(0);
 }
 
-.firstSection__card{
+.pains__card{
   opacity: 0;
   border: 1px solid var(--color-lines);
   background-color: var(--color-card-bg);
@@ -195,7 +198,7 @@ body{
   flex-basis: calc(25% - 2rem);
 }
 
-.firstSection__card h3{
+.pains__card h3{
   font-weight: 400;
 }
 
@@ -203,16 +206,16 @@ body{
   font-size: 2rem;
 }
 
-.firstSection__footer{
+.pains__footer{
   text-align: center;
   margin-top: 3em;
 }
 
-.app__subtitle--first{
+.app__subtitle--pains{
   margin-bottom: 0;
 }
 
-.firstSection__footer h4{
+.pains__footer h4{
   font-size: 1.5rem;
   font-weight: 300;
   margin: 0;
@@ -222,135 +225,27 @@ body{
 
 /* #endregion */
 
-/* #region SECOND SECTION STYLES */
+/* #region BENEFITS SECTION STYLES */
 
-.secondSection__claim,
-.secondSection__listTitle{
+.benefits__listTitle{
   margin: 0;
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  text-align: left;
+  font-size: 1.4rem;
+  text-align: center;
   text-wrap: pretty;
 }
 
-.secondSection__listTitle{
-  margin-bottom: 2.5;
-}
-
 /* #endregion */
 
-/* #region THIRD SECTION STYLES */
+/* #region WHATIS SECTION STYLES */
 
-.app__subtitle--third{
-  margin-top: 1rem;
-}
-
-.thirdSection__whatIs{
-  font-size: 1.2rem;
-}
-
-.timeline__steps{
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-
-.timeline__step{
-  display: grid;
-  grid-template-columns: 1fr 32px 2fr;
-  grid-template-areas: "chapter line descr";
-  column-gap: 1rem;
-  min-height: 100px;
-}
-
-.step__title {
-  grid-area: chapter;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  text-align: right;
-}
-
-.step__chapter{
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.step__chapter2{
+.whatis__info{
   font-size: 1.4rem;
+  text-align: center;
+  text-wrap: balance;
 }
 
-.step__description{
-  grid-area: descr;
-  margin: 0;
-  margin-top: .3rem;
-  font-size: 1.2rem;
-}
-
-.step__line{
-  grid-area: line;
-  width: 2rem;
-  height: 110%;
-  position: relative;
-}
-
-.step__line::before{
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: white;
-  top: 14px;
-  left: calc(50% - 5px);
-  outline: 2px solid white;
-  outline-offset: 2px;
-  transform: scale(0);
-}
-
-.step__line.visible::before{
-  animation: show-dot 1s ease-in-out both;
-}
-
-@keyframes show-dot {
-  from{
-    transform: scale(0);
-  }to{
-    transform: scale(1);
-  }
-}
-
-.step__line:not(.step__line--last)::after{
-  content: "";
-  width: 1px;
-  height: 0%;
-  border-radius: 50%;
-  position: absolute;
-  background-color: white;
-  top: 14px;
-  left: calc(50%);
-}
-
-.step__line.visible:not(.step__line--last)::after{
-  animation: show-line 1s 1s ease-in-out both;
-}
-
-@keyframes show-line {
-  from{
-    height: 0%;
-  }to{
-    height: 130%;
-  }
-}
-
-/* #endregion */
-
-/* #region FOURTH SECTION STYLES */
-
-.fourthSection__productCard{
+.whatis__productCard{
   display: grid;
   grid-template-areas:
     "img price"
@@ -364,7 +259,7 @@ body{
   border: 1px solid var(--color-lines);
   margin: 0 auto;
   margin-top: 4rem;
-  padding: 3rem 3rem;
+  /* padding: 3rem 3rem; */
   border-radius: 1rem;
   box-shadow: 2px 2px 15px var(--color-lines);
 }
@@ -374,12 +269,13 @@ body{
 }
 
 .productCard__img{
-  width: 100%;
+  height: 100%;
   max-width: 300px;
 }
 
 .productCard__price{
   grid-area: price;
+  padding: 2rem 2rem 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -428,47 +324,48 @@ body{
 
 .productCard__cto{
   grid-area: cto;
+  margin: 0 2rem 0 0;
 }
 
 /* #endregion */
 
-/* #region FIFTH SECTION STYLES */
+/* #region WARRANTY SECTION STYLES */
 
-.app__sectionTitle--fifth{
+.app__sectionTitle--warranty{
   color: var(--color-primary);
 }
 
-.fifthSection__garanty{
+.warranty__info{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.garanty__text{
+.warranty__text{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-.fifthSection__garanty p {
+.warranty__info p {
   font-size: 1.3rem;
 }
 
-.fifthSection__garanty p span{
+.warranty__info p span{
   font-weight: 600;
 }
 
-.fifthSection__garanty svg{
+.warranty__info svg{
   width: 40px;
 }
 
 /* #endregion */
 
-/* #region SIXTH SECTION STYLES */
+/* #region FAQS SECTION STYLES */
 
-.sixthSection__accordion{
+.faqs__accordion{
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -528,14 +425,14 @@ body{
 
 /* #endregion */
 
-/* #region SEVENTH SECTION STYLES */
+/* #region LASTCALL SECTION STYLES */
 
-.seventhSection__claim{
+.lastcall__claim{
   color: var(--color-primary);
   font-size: 1.2rem;
 }
 
-.seventhSection__cto{
+.lastcall__cto{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -543,11 +440,11 @@ body{
   gap: 1rem;
 }
 
-.app__sectionTitle--seventh{
+.app__sectionTitle--lastcall{
   margin-bottom: 0;
 }
 
-.app__subtitle--seventh{
+.app__subtitle--lastcall{
   margin-top: 0;
   margin-bottom: 4rem;
 }
@@ -617,83 +514,15 @@ body{
 
 /* #endregion */
 
-/* #region COUNTDOWN STYLES */
-
-.app__section--countdownSection{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.countdownSection__clock{
-  background-color: red;
-  padding: 1rem;
-  border-radius: .5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: ring 1s ease-in-out both infinite;
-}
-
-.countdownSection__clock svg{
-  width: 34px;
-}
-
-.countdownSection__claim{
-  text-align: center;
-  margin-bottom: 0;
-}
-
-@keyframes ring {
-  0%{
-    transform: rotate(0deg);
-  }20%{
-    transform: rotate(10deg);
-  }40%{
-    transform: rotate(-10deg);
-  }60%{
-    transform: rotate(10deg);
-  }80%{
-    transform: rotate(-10deg);
-  }100%{
-    transform: rotate(0deg);
-  }
-}
-
-.countdownSection__counter{
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 7rem;
-}
-
-.countdownSection__counter.stopped{
-  color: red;
-  animation: breathe 1s ease-in-out both infinite;
-}
-
-@keyframes breathe {
-  0%{
-    transform: scale(1);
-  }50%{
-    transform: scale(1.05);
-  }100%{
-    transform: scale(1);
-  }
-}
-
-/* #endregion */
-
 /* #region MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
-  .firstSection__cards{
+  .pains__cards{
     flex-wrap: wrap;
     row-gap: 2rem;
   }
 
-  .firstSection__card{
+  .pains__card{
     flex-basis: calc(50% - 2rem);
   }
 }
@@ -701,6 +530,7 @@ body{
 @media screen and (max-width: 1024px) {
   .header__innnerContainer{
     flex-direction: column;
+    gap: 3rem;
   }
 
   .header__title{
@@ -722,6 +552,10 @@ body{
 
   .app__sectionTitle{
     font-size: 2rem;
+  }
+
+  .header__image{
+    padding: 0 1rem;
   }
 }
 
@@ -747,20 +581,24 @@ body{
     text-align: center;
   }
 
-
   .app__section{
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+  }
+
+  .benefits__listTitle{
+    font-size: 1.2rem;
+    text-align: left;
   }
 
   .app_sectionTitle{
     font-size: 1.8rem;
   }
 
-  .firstSection__cards{
+  .pains__cards{
     margin: 0;
   }
 
-  .firstSection__card{
+  .pains__card{
     flex-basis: 100%;
   }
 
@@ -772,49 +610,44 @@ body{
     font-size: 1.2rem;
   }
 
-  .fourthSection__productCard {
-    padding: 0rem;
-    padding-bottom: 2rem;
+  .whatis__info{
+    font-size: 1.2rem;
+    text-align: left;
+    text-wrap: pretty;
   }
 
 }
 
 @media screen and (max-width: 700px) {
-  .timeline__step{
-    grid-template-columns: 32px 1fr;
+
+  .whatis__productCard {
+    width: 100%;
     grid-template-areas:
-    "line chapter"
-    "line descr";
+      "img"
+      "price"
+      "cto"
+    ;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2rem;
   }
 
-  .step__title {
-    align-items: start;
-    text-align: left;
+  .productCard__img{
+    width: 100%;
+    max-width: none;
   }
 
-  @keyframes show-line {
-    from{
-      height: 0%;
-    }to{
-      height: 110%;
-    }
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-
-  .fourthSection__productCard {
-    grid-template-areas:
-    "img price"
-    "cto cto"
-  ;
+  .productCard__price{
+    padding: 0;
   }
 
   .productCard__cto{
     display: flex;
     justify-content: center;
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -824,29 +657,11 @@ body{
     --res-x-padding: 1.2rem;
   }
 
-  .countdownSection__counter{
-    font-size: 5rem;
-  }
-
   .app__button--cto{
     font-size: 1.3rem;
   }
 
-  .fourthSection__productCard {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    grid-template-areas:
-      "img"
-      "price"
-      "cto"
-    ;
-  }
 
-  .productCard__img{
-    width: 100%;
-    max-width: none;
-  }
 }
 
 /* #endregion */
