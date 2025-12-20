@@ -356,6 +356,7 @@ body{
     "img price"
     "img cto"
   ;
+  overflow: hidden;
   grid-template-rows: auto 1fr;
   justify-content: center;
   gap: 2rem;
@@ -363,7 +364,7 @@ body{
   border: 1px solid var(--color-lines);
   margin: 0 auto;
   margin-top: 4rem;
-  padding: 3rem 5rem;
+  padding: 3rem 3rem;
   border-radius: 1rem;
   box-shadow: 2px 2px 15px var(--color-lines);
 }
@@ -772,7 +773,8 @@ body{
   }
 
   .fourthSection__productCard {
-    padding: 2rem 2rem;
+    padding: 0rem;
+    padding-bottom: 2rem;
   }
 
 }
